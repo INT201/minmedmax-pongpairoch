@@ -8,13 +8,11 @@ function minMedMax(n1, n2, n3) {
     let min = n1
     let max = n1
     let mid = n1
-  
-    for (let index = 0; index < arr.length; index++) {
-      if (arr[index] < min) {
-        min = arr[index]
-      }
-    }
-  
+   
+    arr.forEach(index =>{
+      index < min ? index:min;
+    })//ลองใช้ foreach
+
     for (let index = 0; index < arr.length; index++) {
       if (arr[index] > max) {
         max = arr[index]
@@ -27,6 +25,8 @@ function minMedMax(n1, n2, n3) {
       }
     }
   
+      
+
     result.min = min
     result.mid = mid
     result.max = max
